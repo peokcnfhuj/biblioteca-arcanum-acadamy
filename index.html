@@ -534,6 +534,67 @@
         height: 100%;
         background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright));
       }
+
+      /* ---------- Continuar lendo (topo) ---------- */
+      #continue-section[hidden] { display: none; }
+      .continue-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      @media (min-width: 760px) {
+        .continue-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+      .continue-card {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        background: linear-gradient(180deg, rgba(212, 175, 55, 0.07), rgba(255, 255, 255, 0.012));
+        border: 1px solid rgba(212, 175, 55, 0.45);
+        border-radius: 6px;
+        padding: 18px 20px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      }
+      .cover.mini {
+        width: 82px;
+        padding: 10px 8px 9px;
+        box-shadow:
+          -5px 0 0 -2px #0a0a12,
+          -6px 0 0 -2px rgba(212, 175, 55, 0.35),
+          0 10px 20px rgba(0, 0, 0, 0.7),
+          inset 0 0 24px rgba(0, 0, 0, 0.85);
+      }
+      .cover.mini::after { inset: 5px 5px 5px 10px; }
+      .cover.mini .c-top { font-size: 0.32rem; letter-spacing: 0.22em; }
+      .cover.mini .c-orn { margin: 4px 0 1px; }
+      .cover.mini .c-orn svg { width: 28px; height: 28px; }
+      .cover.mini .c-title { font-size: 0.6rem; line-height: 1.4; margin-top: 2px; }
+      .cover.mini .c-sub { font-size: 0.38rem; letter-spacing: 0.2em; margin-top: 3px; }
+      .cover.mini .c-author { font-size: 0.4rem; letter-spacing: 0.2em; }
+      .cover.mini .c-rule { width: 26px; margin-top: 5px; }
+      .continue-info { flex: 1; min-width: 0; text-align: left; }
+      .continue-info h3 {
+        font-family: "Cinzel", serif;
+        font-size: 1.02rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        line-height: 1.4;
+        color: var(--ink);
+        margin: 0 0 4px;
+      }
+      .continue-where {
+        margin: 0;
+        font-size: 1.04rem;
+        color: var(--ink-soft);
+      }
+      .continue-where .done { color: var(--gold-bright); }
+      .continue-info .card-progress { max-width: none; margin-top: 10px; }
+      .continue-info .btn { margin-top: 14px; min-height: 44px; padding: 10px 20px; }
+      a.tool-btn { text-decoration: none; }
+      @media (max-width: 420px) {
+        .continue-card { gap: 14px; padding: 14px; }
+        .cover.mini { width: 68px; }
+      }
       @media (max-width: 560px) {
         .reader { padding: 6px; }
         .reader-head { padding: 10px 12px 6px; }
@@ -704,6 +765,16 @@
       </header>
 
       <main>
+        <!-- ================= CONTINUAR LENDO ================= -->
+        <section id="continue-section" aria-labelledby="continue-title" hidden>
+          <div class="section-head">
+            <h2 id="continue-title">Continuar <span class="gold">Lendo</span></h2>
+            <span class="line" aria-hidden="true"></span>
+            <span class="count" id="continue-count"></span>
+          </div>
+          <div class="continue-grid" id="continue-grid"></div>
+        </section>
+
         <!-- ================= ACERVO ================= -->
         <section aria-labelledby="acervo-title">
           <div class="section-head">
@@ -746,6 +817,10 @@
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
                   Abrir no Drive
                 </a>
+                <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=16_JOnjciYA52V1RrGPm20ZWo9Z2oZeEN" download>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Salvar PDF
+                </a>
               </div>
             </article>
 
@@ -782,6 +857,10 @@
                 <a class="btn secondary" href="https://drive.google.com/file/d/1Ee87SSHYtEyYPdqSyIdlJibRKqU3KxDc/view" target="_blank" rel="noopener">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
                   Abrir no Drive
+                </a>
+                <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=1Ee87SSHYtEyYPdqSyIdlJibRKqU3KxDc" download>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Salvar PDF
                 </a>
               </div>
             </article>
@@ -846,6 +925,10 @@
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
                   Abrir no Drive
                 </a>
+                <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=1EIpCeZT9b_DOYEcupJ2i_isxDmvjCPJ0" download>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Salvar PDF
+                </a>
               </div>
             </article>
 
@@ -881,6 +964,10 @@
                 <a class="btn secondary" href="https://drive.google.com/file/d/1XrX2Csd_CPN-NFZi9Kgpm5ahIzvF5RCk/view" target="_blank" rel="noopener">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
                   Abrir no Drive
+                </a>
+                <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=1XrX2Csd_CPN-NFZi9Kgpm5ahIzvF5RCk" download>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Salvar PDF
                 </a>
               </div>
             </article>
@@ -945,6 +1032,10 @@
           <button class="tool-btn" id="toc-open" type="button">Sumário</button>
           <button class="tool-btn" id="bm-open" type="button">Marcadores</button>
           <button class="tool-btn" id="bm-toggle" type="button" aria-pressed="false">Marcar capítulo</button>
+          <a class="tool-btn" id="reader-download" href="#" download>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+            Salvar PDF
+          </a>
           <span class="tool-spacer" aria-hidden="true"></span>
           <span class="reader-pct" id="reader-pct">0%</span>
           <button class="tool-btn" id="font-dec" type="button" aria-label="Diminuir o tamanho da fonte">A−</button>
@@ -959,7 +1050,7 @@
             <button class="tool-btn" id="chap-next" type="button">Próximo capítulo →</button>
           </div>
         </div>
-        <p class="reader-note">Leitura nativa da Biblioteca: o texto abre na hora, aqui mesmo, e o seu progresso fica salvo neste navegador. Para o PDF completo ilustrado, use “Abrir no Drive” no card do livro.</p>
+        <p class="reader-note">Leitura nativa da Biblioteca: o texto abre na hora, aqui mesmo, e o seu progresso fica salvo neste navegador. Para baixar o PDF completo ilustrado, toque em “Salvar PDF” aqui em cima ou no card do livro.</p>
         <div class="reader-panel" id="reader-panel" hidden>
           <div class="reader-panel-head">
             <h4 id="reader-panel-title">Sumário</h4>
@@ -1053,6 +1144,13 @@
         var panelTitle = document.getElementById("reader-panel-title");
         var panelList = document.getElementById("reader-panel-list");
         var bmToggle = document.getElementById("bm-toggle");
+        var dlLink = document.getElementById("reader-download");
+        var PDF_URLS = {
+          daemons72: "https://drive.google.com/uc?export=download&id=16_JOnjciYA52V1RrGPm20ZWo9Z2oZeEN",
+          rituais: "https://drive.google.com/uc?export=download&id=1XrX2Csd_CPN-NFZi9Kgpm5ahIzvF5RCk",
+          alquimia: "https://drive.google.com/uc?export=download&id=1EIpCeZT9b_DOYEcupJ2i_isxDmvjCPJ0",
+          paimon1: "https://drive.google.com/uc?export=download&id=1Ee87SSHYtEyYPdqSyIdlJibRKqU3KxDc"
+        };
         var lastFocus = null;
         var current = null; // { id, book, ch, lengths, total }
         var saveTimer = null;
@@ -1214,6 +1312,10 @@
           reader.hidden = false;
           reader.classList.add("open");
           document.body.style.overflow = "hidden";
+          if (dlLink) {
+            if (PDF_URLS[id]) { dlLink.href = PDF_URLS[id]; dlLink.style.display = ""; }
+            else { dlLink.style.display = "none"; }
+          }
           var prog = loadProgress(id);
           if (prog && typeof prog.ch === "number") goToChapter(prog.ch, prog.frac || 0);
           else goToChapter(0, 0);
@@ -1234,7 +1336,78 @@
           if (!panel.hidden) closePanel(); else closeReader();
         });
 
+        function renderContinue() {
+          var section = document.getElementById("continue-section");
+          var grid = document.getElementById("continue-grid");
+          var countEl = document.getElementById("continue-count");
+          if (!section || !grid) return;
+          grid.innerHTML = "";
+          var items = [];
+          var buttons = document.querySelectorAll(".read-btn[data-book]");
+          for (var i = 0; i < buttons.length; i++) {
+            var id = buttons[i].getAttribute("data-book");
+            var prog = loadProgress(id);
+            if (prog && prog.pct > 0 && BOOKS[id]) items.push({ id: id, prog: prog, btn: buttons[i] });
+          }
+          items.sort(function (a, b) {
+            var fa = a.prog.pct >= 100 ? 1 : 0;
+            var fb = b.prog.pct >= 100 ? 1 : 0;
+            if (fa !== fb) return fa - fb;
+            return b.prog.pct - a.prog.pct;
+          });
+          if (!items.length) { section.hidden = true; return; }
+          section.hidden = false;
+          if (countEl) countEl.textContent = items.length + (items.length === 1 ? " leitura" : " leituras");
+          items.forEach(function (item) {
+            var book = BOOKS[item.id];
+            var card = document.createElement("article");
+            card.className = "continue-card";
+            var srcCard = item.btn.closest(".book");
+            var srcCover = srcCard ? srcCard.querySelector(".cover") : null;
+            if (srcCover) {
+              var cover = srcCover.cloneNode(true);
+              cover.classList.add("mini");
+              cover.setAttribute("aria-hidden", "true");
+              cover.removeAttribute("role");
+              cover.removeAttribute("aria-label");
+              card.appendChild(cover);
+            }
+            var info = document.createElement("div");
+            info.className = "continue-info";
+            var h = document.createElement("h3");
+            h.textContent = book.title;
+            info.appendChild(h);
+            var where = document.createElement("p");
+            where.className = "continue-where";
+            if (item.prog.pct >= 100) {
+              where.innerHTML = "Leitura concluída <span class=\"done\">✓</span>";
+            } else {
+              var chIdx = Math.min(book.chapters.length - 1, Math.max(0, item.prog.ch || 0));
+              var chName = book.chapters[chIdx] ? book.chapters[chIdx].t : "";
+              where.textContent = "Você parou em: " + chName + " · " + item.prog.pct + "% lido";
+            }
+            info.appendChild(where);
+            var bar = document.createElement("div");
+            bar.className = "card-progress";
+            bar.setAttribute("aria-hidden", "true");
+            bar.innerHTML = "<span></span>";
+            bar.firstChild.style.width = item.prog.pct + "%";
+            info.appendChild(bar);
+            var resumeBtn = document.createElement("button");
+            resumeBtn.type = "button";
+            resumeBtn.className = "btn";
+            resumeBtn.textContent = item.prog.pct >= 100 ? "Ler novamente" : "Continuar lendo";
+            (function (bookId, b) {
+              b.addEventListener("click", function () { openReader(bookId, b); });
+            })(item.id, resumeBtn);
+            info.appendChild(resumeBtn);
+            card.appendChild(info);
+            grid.appendChild(card);
+          });
+        }
+
         function refreshCards() {
+          renderContinue();
           var buttons = document.querySelectorAll(".read-btn[data-book]");
           for (var i = 0; i < buttons.length; i++) {
             (function (btn) {
