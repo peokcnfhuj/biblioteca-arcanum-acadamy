@@ -121,6 +121,33 @@
       }
       .author-line b { color: var(--silver); font-weight: 600; }
 
+      /* ---------- Aviso pré-venda / ecossistema Arcanum ---------- */
+      .exclusive-banner {
+        margin: 30px auto 0;
+        max-width: 760px;
+        text-align: center;
+        padding: 20px 24px;
+        border: 1px solid rgba(212, 175, 55, 0.65);
+        border-radius: 6px;
+        background: linear-gradient(180deg, rgba(212, 175, 55, 0.14), rgba(212, 175, 55, 0.04));
+        box-shadow: 0 0 28px rgba(212, 175, 55, 0.14);
+      }
+      .exclusive-banner .exclusive-main {
+        margin: 0;
+        font-family: "Cinzel", serif;
+        font-size: 1.02rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        line-height: 1.5;
+        color: var(--gold-bright);
+      }
+      .exclusive-banner .exclusive-sub {
+        margin: 8px 0 0;
+        font-size: 0.98rem;
+        font-style: italic;
+        color: var(--silver);
+      }
+
       /* ---------- Seções ---------- */
       section { margin-top: 54px; }
       .section-head {
@@ -906,6 +933,10 @@
         <h1 class="title">Biblioteca</h1>
         <p class="subtitle">O acervo de Pedro Reis — livros e livretos da Arcanum Acadamy</p>
         <p class="author-line">Coleção de <b>Pedro Reis</b></p>
+        <div class="exclusive-banner" role="note">
+          <p class="exclusive-main">&#10022; Estes livros s&atilde;o exclusivos para quem comprou na pr&eacute;-venda da Arcanum Academy</p>
+          <p class="exclusive-sub">Faz parte do ecossistema Arcanum</p>
+        </div>
       </header>
 
       <main>
@@ -924,7 +955,7 @@
           <div class="section-head">
             <h2 id="acervo-title">Acervo <span class="gold">· Prontos</span></h2>
             <span class="line" aria-hidden="true"></span>
-            <span class="count" id="acervo-count">18 obras</span>
+            <span class="count" id="acervo-count">20 obras</span>
           </div>
 
           <div class="toolbar" id="toolbar">
@@ -1588,6 +1619,46 @@
                 </a>
               </div>
             </article>
+            <article class="book" data-kind="ebook" data-title="Voodoo — Parte 3">
+              <div class="cover" role="img" aria-label="Capa do livro Voodoo — Parte 3, de Pedro Reis">
+                <p class="c-top">Arcanum Acadamy</p>
+                <div>
+                  <div class="c-orn" aria-hidden="true">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#d4af37" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="26" cy="26" r="19" opacity="0.9"/>
+                      <path d="M26 8 L26 44" opacity="0.9"/>
+                      <path d="M8 26 L44 26" opacity="0.9"/>
+                      <path d="M13 13 L39 39" opacity="0.9"/>
+                      <path d="M39 13 L13 39" opacity="0.9"/>
+                      <circle cx="26" cy="26" r="4.5" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M26 8 L23.5 13 M26 8 L28.5 13" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M26 44 L23.5 39 M26 44 L28.5 39" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M8 26 L13 23.5 M8 26 L13 28.5" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M44 26 L39 23.5 M44 26 L39 28.5" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                    </svg>
+                  </div>
+                  <p class="c-title">Voodoo</p>
+                  <p class="c-sub">Volume XVI · Parte 3</p>
+                </div>
+                <div>
+                  <div class="c-rule" aria-hidden="true"></div>
+                  <p class="c-author">Pedro Reis</p>
+                </div>
+              </div>
+              <h3>Voodoo — Parte 3</h3>
+              <p class="meta">Volume XVI · Parte 3 <span class="pages">· 247 páginas</span></p>
+              <p class="desc">Os bonecos que faltavam — novos materiais e novas formas, os Loa que ainda não tinham boneco, os lugares e as passagens, a vida com o boneco e o ateliê de construir o boneco passo a passo.</p>
+              <div class="btn-row">
+                <a class="btn secondary" href="https://drive.google.com/file/d/1oeNVMfVlKUm0Wigt4OifW-zI73_6OpMH/view" target="_blank" rel="noopener">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Abrir no Drive
+                </a>
+                <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=1oeNVMfVlKUm0Wigt4OifW-zI73_6OpMH" download>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Salvar PDF
+                </a>
+              </div>
+            </article>
             <article class="book" data-kind="ebook" data-title="Hoodoo — Parte 1">
               <div class="cover" role="img" aria-label="Capa do livro Hoodoo — Parte 1, de Pedro Reis">
                 <p class="c-top">Arcanum Acadamy</p>
@@ -1671,6 +1742,46 @@
                   Abrir no Drive
                 </a>
                 <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=1ZH8wBHWRBxUJG_wQ1QSQwfmOWblFrJBf" download>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Salvar PDF
+                </a>
+              </div>
+            </article>
+            <article class="book" data-kind="ebook" data-title="Hoodoo — Parte 3">
+              <div class="cover" role="img" aria-label="Capa do livro Hoodoo — Parte 3, de Pedro Reis">
+                <p class="c-top">Arcanum Acadamy</p>
+                <div>
+                  <div class="c-orn" aria-hidden="true">
+                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" stroke="#d4af37" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="26" cy="26" r="19" opacity="0.9"/>
+                      <path d="M26 8 L26 44" opacity="0.9"/>
+                      <path d="M8 26 L44 26" opacity="0.9"/>
+                      <path d="M13 13 L39 39" opacity="0.9"/>
+                      <path d="M39 13 L13 39" opacity="0.9"/>
+                      <circle cx="26" cy="26" r="4.5" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M26 8 L23.5 13 M26 8 L28.5 13" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M26 44 L23.5 39 M26 44 L28.5 39" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M8 26 L13 23.5 M8 26 L13 28.5" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                      <path d="M44 26 L39 23.5 M44 26 L39 28.5" fill="#d4af37" stroke="#d4af37" opacity="0.9"/>
+                    </svg>
+                  </div>
+                  <p class="c-title">Hoodoo</p>
+                  <p class="c-sub">Volume XV · Parte 3</p>
+                </div>
+                <div>
+                  <div class="c-rule" aria-hidden="true"></div>
+                  <p class="c-author">Pedro Reis</p>
+                </div>
+              </div>
+              <h3>Hoodoo — Parte 3</h3>
+              <p class="meta">Volume XV · Parte 3 <span class="pages">· 247 páginas</span></p>
+              <p class="desc">Os feitiços com bonecos do Hoodoo — construir o boneco passo a passo, batizar com nome, Salmo e óleo, rechear, alimentar e cuidar, com os 20 feitiços completos, sem repetir o Voodoo — Parte 2 nem o Hoodoo — Parte 1.</p>
+              <div class="btn-row">
+                <a class="btn secondary" href="https://drive.google.com/file/d/12kAq-06Rg1KqMB1DdaoZ_9sugbFHvQmE/view" target="_blank" rel="noopener">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
+                  Abrir no Drive
+                </a>
+                <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=12kAq-06Rg1KqMB1DdaoZ_9sugbFHvQmE" download>
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 21h16"/></svg>
                   Salvar PDF
                 </a>
@@ -1833,8 +1944,10 @@
           "caos": "https://drive.google.com/uc?export=download&id=1ra-6vBWd5ziBOCaAP851xnRbFegQff17",
           "voodoo": "https://drive.google.com/uc?export=download&id=1nlKR-xdV9Xxdkr1TvTjCLl6Oz_fNW5_D",
           "voodoo2": "https://drive.google.com/uc?export=download&id=1dtQ9ykaTLapkqCANdUbQ8DykN16QSbRc",
+          "voodoo3": "https://drive.google.com/uc?export=download&id=1oeNVMfVlKUm0Wigt4OifW-zI73_6OpMH",
           "hoodoo": "https://drive.google.com/uc?export=download&id=1bU2y9ZTpzhY_zCWrVfx9GwrWxn6XLh35",
-          "hoodoo2": "https://drive.google.com/uc?export=download&id=1ZH8wBHWRBxUJG_wQ1QSQwfmOWblFrJBf"
+          "hoodoo2": "https://drive.google.com/uc?export=download&id=1ZH8wBHWRBxUJG_wQ1QSQwfmOWblFrJBf",
+          "hoodoo3": "https://drive.google.com/uc?export=download&id=12kAq-06Rg1KqMB1DdaoZ_9sugbFHvQmE"
         };
         var lastFocus = null;
         var current = null; // { id, book, ch, lengths, total }
