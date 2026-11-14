@@ -1,8 +1,8 @@
 // ============================================================
 // Biblioteca Arcanum Acadamy — área de login (e-mail e senha)
 // Supabase Auth + progresso e favoritos separados por conta.
-// Sem login o site continua igual: leitura anônima, progresso só
-// neste navegador, sem salvar nada na nuvem.
+// A leitura é só para quem tem conta: sem login, o leitor abre a tela
+// de login/criar conta em vez do conteúdo do livro.
 // ============================================================
 (function () {
   "use strict";
@@ -377,7 +377,7 @@
         applyFavVisibility();
         closeModal("account-modal");
         if (window.ArcanumReader) window.ArcanumReader.refreshCards();
-        toast("Você saiu da conta. A leitura continua anônima.");
+        toast("Você saiu da conta. Para ler, entre de novo.");
       });
     });
 
